@@ -1,32 +1,40 @@
 using System;
 
-namespace Task1
+
+namespace Task3
 {
     public class Program
     {
-        public static bool IsEven(int number)
+        public static string ClassifyAge(int age)
         {
-            return number % 2 == 0;
-        }
-
-        public static string GetMessage(int number)
-        {
-            if (IsEven(number))
+            if (age >= 0 && age < 12)
             {
-                return "Двері відкриваються!";
+                return "Ви дитина";
+            }
+            else if (age >= 12 && age < 18)
+            {
+                return "Підліток";
+            }
+            else if (age >= 18 && age < 60)
+            {
+                return "Дорослий";
+            }
+            else if (age >= 60 && age <= 120)
+            {
+                return "Пенсіонер";
             }
             else
             {
-                return "Двері зачинені...";
+                return "Нереальний вік";
             }
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Введіть число:");
-            int number = int.Parse(Console.ReadLine());
-            string message = GetMessage(number);
-            Console.WriteLine(message);
+            Console.WriteLine("Введіть вік:");
+            int age = int.Parse(Console.ReadLine());
+            string category = ClassifyAge(age);
+            Console.WriteLine("Категорія: " + category);
         }
     }
 }

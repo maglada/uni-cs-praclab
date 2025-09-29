@@ -1,32 +1,66 @@
 using System;
 
-namespace Task1
+namespace Task5
 {
     public class Program
     {
-        public static bool IsEven(int number)
+        public static double GetAverage(int[] marks)
         {
-            return number % 2 == 0;
+            if (marks == null || marks.Length == 0)
+                throw new ArgumentException("Array is null or empty");
+
+            double sum = 0;
+            foreach (var mark in marks)
+            {
+                sum += mark;
+            }
+            return sum / marks.Length;
         }
 
-        public static string GetMessage(int number)
+        public static int GetMin(int[] marks)
         {
-            if (IsEven(number))
+            if (marks == null || marks.Length == 0)
+                throw new ArgumentException("Array is null or empty");
+
+            int min = marks[0];
+            foreach (var mark in marks)
             {
-                return "Двері відкриваються!";
+                if (mark < min)
+                    min = mark;
             }
-            else
+            return min;
+        }
+
+        public static int GetMax(int[] marks)
+        {
+            if (marks == null || marks.Length == 0)
+                throw new ArgumentException("Array is null or empty");
+
+            int max = marks[0];
+            foreach (var mark in marks)
             {
-                return "Двері зачинені...";
+                if (mark > max)
+                    max = mark;
             }
+            return max;
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Введіть число:");
-            int number = int.Parse(Console.ReadLine());
-            string message = GetMessage(number);
-            Console.WriteLine(message);
+            int[][] groups = new int[3][]
+            {
+                new int[] { 80, 90, 70, 60, 100 },
+                new int[] { 50, 75, 85, 95, 65 },
+                new int[] { 90, 92, 96, 98, 100 }
+            };
+            for (int i = 0; i < groups.Length; i++)
+            {
+                double average = GetAverage(groups[i]);
+                int min = GetMin(groups[i]);
+                int max = GetMax(groups[i]);
+                Console.WriteLine($"Група {i + 1}: Середній = {average}, Мінімальний = {min}, Максимальний = {max}");
+            }
+
         }
     }
 }
