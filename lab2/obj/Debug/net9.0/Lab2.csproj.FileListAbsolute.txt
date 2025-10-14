@@ -1,0 +1,5 @@
+C:\Users\maggy\Documents\code\cs\uni\uni-cs-praclab\lab2\Lab2\Lab2\obj\Debug\net9.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maggy\Documents\code\cs\uni\uni-cs-praclab\lab2\Lab2\Lab2\obj\Debug\net9.0\Lab2.AssemblyInfoInputs.cache
+C:\Users\maggy\Documents\code\cs\uni\uni-cs-praclab\lab2\Lab2\Lab2\obj\Debug\net9.0\Lab2.AssemblyInfo.cs
+C:\Users\maggy\Documents\code\cs\uni\uni-cs-praclab\lab2\Lab2\Lab2\obj\Debug\net9.0\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\maggy\Documents\code\cs\uni\uni-cs-praclab\lab2\Lab2\Lab2\obj\Debug\net9.0\Lab2.sourcelink.json
