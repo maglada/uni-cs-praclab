@@ -1,2 +1,41 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+using HouseSystem;
+
+namespace HouseSystem
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            var controller = new SmartHomeController();
+            
+            var light = new Light { Name = "Лампа у вітальні" };
+            var ac = new AirConditioner { Name = "Кондиціонер у спальні" };
+            var coffee = new CoffeeMachine { Name = "Кавомашина на кухні" };
+            var sensor = new MotionSensor { Name = "Датчик руху у коридорі" };
+            
+            controller.AddDevice(light);
+            controller.AddDevice(ac);
+            controller.AddDevice(coffee);
+            controller.AddDevice(sensor);
+            
+            controller.AddEnergyDevice(light);
+            controller.AddEnergyDevice(ac);
+            controller.AddEnergyDevice(coffee);
+            
+            controller.TurnAllOn();
+            
+            Console.WriteLine();
+            light.PrintStatus();
+            ac.PrintStatus();
+            coffee.PrintStatus();
+            sensor.PrintStatus();
+            
+            Console.WriteLine();
+            controller.ShowEnergyReport(5);
+            
+            Console.WriteLine();
+            controller.TurnAllOff();
+        }
+    }
+}

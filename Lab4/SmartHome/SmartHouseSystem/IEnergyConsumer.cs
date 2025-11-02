@@ -5,6 +5,6 @@ namespace HouseSystem
         string DeviceName { get; }
         int PowerConsumption { get; }
         bool IsOn { get; }
-        int GetEnergyUsage(int hours);
+        double GetEnergyUsage(int hours);
     }
 }

@@ -1,21 +1,18 @@
-class MotionSensor : Device
+namespace HouseSystem
 {
-
-    public MotionSensor(string name)
+    public class MotionSensor : Device
     {
-        Name = name;
-        IsOn = false;
-    }
 
-    public override void TurnOn()
-    {
-        IsOn = true;
-        Console.WriteLine($"{Name} активований.");
-    }
+        public override void TurnOn()
+        {
+            IsOn = true;
+            Console.WriteLine($"{Name} активовано.");
+        }
 
-    public override void TurnOff()
-    {
-        IsOn = false;
-        Console.WriteLine($"{Name} деактивовано.");
+        public override void TurnOff()
+        {
+            IsOn = false;
+            Console.WriteLine($"{Name} деактивовано.");
+        }
     }
 }
