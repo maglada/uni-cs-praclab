@@ -1,7 +1,7 @@
 ﻿using System;
-using HouseSystem;
+using SmartHouseSystem;
 
-namespace HouseSystem
+namespace SmartHouseSystem
 {
     public class Program
     {

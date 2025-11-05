@@ -1,4 +1,4 @@
-namespace HouseSystem
+namespace SmartHouseSystem
 {
     public class CoffeeMachine : Device, IEnergyConsumer
     {
@@ -17,13 +17,14 @@ namespace HouseSystem
             Console.WriteLine($"{Name} завершила роботу.");
         }
 
-        public int GetEnergyUsage(int hours)
+        public double GetEnergyUsage(int hours)
         {
             if (IsOn)
-            {
-                return (PowerConsumption * hours) / 1000;
+            {   
+                return (PowerConsumption * hours) / 1000.0;
             }
             return 0;
         }
+
     }
 }

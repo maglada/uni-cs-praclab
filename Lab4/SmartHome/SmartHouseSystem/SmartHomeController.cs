@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HouseSystem
+namespace SmartHouseSystem
 {
     public class SmartHomeController
 
@@ -43,11 +43,12 @@ namespace HouseSystem
             {
                 double usage = device.GetEnergyUsage(hours);
                 total += usage;
-                Console.WriteLine($"{device.DeviceName}: {usage:F2} кВт·год (потужність: {device.PowerConsumption} Вт)");
+                Console.WriteLine($"{device.DeviceName}: {usage.ToString("F2", new System.Globalization.CultureInfo("uk-UA"))} кВт·год (потужність: {device.PowerConsumption} Вт)");
+
             }
 
-            Console.WriteLine($"Загальне споживання: {total:F2} кВт·год");
-            Console.WriteLine($"Вартість (~4 грн/кВт·год): {total * 4:F2} грн");
+            Console.WriteLine($"Загальне споживання: {total.ToString("F2", new System.Globalization.CultureInfo("uk-UA"))} кВт·год");
+            Console.WriteLine($"Вартість (~4 грн/кВт·год): {(total * 4).ToString("F2", new System.Globalization.CultureInfo("uk-UA"))} грн");
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartHomeSystem.Tests
+namespace SmartHouseSystem.Tests
 {
     [TestFixture]
     public class IntegrationTests

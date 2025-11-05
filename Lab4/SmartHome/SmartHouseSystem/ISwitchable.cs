@@ -1,4 +1,4 @@
-namespace HouseSystem
+namespace SmartHouseSystem
 {
     public interface ISwitchable
     {
