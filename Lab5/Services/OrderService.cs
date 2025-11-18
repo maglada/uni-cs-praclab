@@ -74,6 +74,10 @@ namespace Lab5.Services
             }
         }
 
+        public List<Order> GetAllOrders()
+        {
+            return orders;
+        }
         public List<Order> GetActiveOrders()
         {
             return GetAllActiveOrders();

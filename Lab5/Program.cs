@@ -73,6 +73,14 @@ namespace Lab5
             // Зміна статусу замовлення
             orderController.ChangeOrderStatus(order.Id, OrderStatus.InProgress);
             Console.WriteLine($"\nСтатус замовлення ID {order.Id} змінено на {OrderStatus.InProgress}");
+            orderController.ChangeOrderStatus(order.Id, OrderStatus.Ready);
+            Console.WriteLine($"\nСтатус замовлення ID {order.Id} змінено на {OrderStatus.Ready}");
+            orderController.ChangeOrderStatus(order.Id, OrderStatus.Paid);
+            Console.WriteLine($"\nСтатус замовлення ID {order.Id} змінено на {OrderStatus.Paid}");
+
+            Console.WriteLine("\nУсі замовлення:");
+            orderController.ViewAllOrders();
+
         }
     }
 }

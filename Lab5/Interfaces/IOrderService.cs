@@ -13,6 +13,7 @@ namespace Lab5.Interfaces
         void ChangeOrderStatus(int orderId, OrderStatus newStatus);
         void UpdateOrderStatus(int id, OrderStatus status);
         List<Order> GetActiveOrders();
+        List<Order> GetAllOrders();
         decimal CalculateTotalPrice(int orderId);
     }
 }

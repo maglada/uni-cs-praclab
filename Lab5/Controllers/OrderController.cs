@@ -42,5 +42,13 @@ namespace Lab5.Controllers
                 Console.WriteLine($"Order ID: {order.Id}, Table: {order.TableNumber}, Status: {order.Status}, Total Price: {order.TotalPrice()}");
             }
         }
+        public void ViewAllOrders()
+        {
+            var orders = _orderService.GetAllOrders();
+            foreach (var order in orders)
+            {
+                Console.WriteLine($"Order ID: {order.Id}, Table: {order.TableNumber}, Status: {order.Status}, Total Price: {order.TotalPrice()}");
+            }
+        }
     }
 }
